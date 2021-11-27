@@ -1,5 +1,5 @@
 -- 快速刷新 reload 配置
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, 'r', function ()
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, 'R', function ()
    hs.reload() 
 end)
 hs.alert('config reload')
@@ -36,31 +36,31 @@ hs.hotkey.bind({"cmd", "alt" }, "Right", function()
     win:setFrame(f)
   end)
 
-  hs.hotkey.bind({"cmd", "alt" }, "down", function()
+hs.hotkey.bind({"cmd", "alt" }, "down", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
     local max = screen:frame()
-  
+
     f.x = max.x 
     f.y = max.y + max.h / 2
     f.w = max.w 
     f.h = max.h / 2
     win:setFrame(f)
-  end)
+end)
 
 
-  hs.hotkey.bind({"cmd", "alt" }, "up", function()
+hs.hotkey.bind({"cmd", "alt" }, "up", function()
     local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
     local max = screen:frame()
-  
+    
     f.x = max.x 
     f.y = max.y 
     f.w = max.w 
     f.h = max.h / 2
     win:setFrame(f)
-  end)
+end)
 
  
